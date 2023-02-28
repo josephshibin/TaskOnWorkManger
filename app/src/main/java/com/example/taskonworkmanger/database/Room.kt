@@ -3,6 +3,7 @@ package com.example.taskonworkmanger.database
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.taskonworkmanger.domain.DevByteVideo
 
 @Dao
 interface VideoDao {
@@ -10,7 +11,7 @@ interface VideoDao {
     fun getVideos(): LiveData<List<DatabaseVideo>>
 
 //    @Delete
-//    suspend fun deleteById(id:Int)
+//   fun delete(item:List<DevByteVideo>)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(videos: List<DatabaseVideo>)
@@ -32,7 +33,7 @@ fun getDatabase(context: Context): VideosDatabase {
                 VideosDatabase::class.java,
                 "videos"
             )
-                .fallbackToDestructiveMigration()
+
                 .build()
         }
     }

@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.taskonworkmanger.database.getDatabase
+import com.example.taskonworkmanger.domain.DevByteVideo
 import com.example.taskonworkmanger.repository.VideosRepository
 import kotlinx.coroutines.*
 import java.io.IOException
@@ -60,8 +61,8 @@ class DevByteViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 
-//    fun delete(id:Int) = viewModelScope.launch{
-//        videosRepository.deleteItem(id)
+//    fun delete(item:DevByteVideo) = viewModelScope.launch{
+//        videosRepository.deleteItem(item)
 //    }
 
 

@@ -28,10 +28,10 @@ class VideosRepository(private val database: VideosDatabase) {
             database.videoDao.insertAll(playlist.asDatabaseModel())
         }
     }
-//    suspend fun deleteItem(id:Int) {
-//        withContext(Dispatchers.IO) {
-//            database.videoDao.deleteById(id)
-//        }
+//    suspend fun deleteItem(item:DevByteVideo) {
+//      //  withContext(Dispatchers.IO) {
+//            database.videoDao.delete(item)
+//        //}
 //    }
 
 }
