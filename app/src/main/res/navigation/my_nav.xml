@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/devByteFragment">
+    <fragment
+        android:id="@+id/devByteFragment"
+        android:name="com.example.taskonworkmanger.ui.DevByteFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_devByteFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.taskonworkmanger.ui.SecondFragment"
+        android:label="fragment_second2"
+        tools:layout="@layout/fragment_second2" >
+        <action
+            android:id="@+id/action_secondFragment_to_devByteFragment"
+            app:destination="@id/devByteFragment" />
+    </fragment>
+</navigation>
